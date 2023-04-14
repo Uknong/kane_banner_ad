@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Image Animation</title>
+  <style>
+    #my-image {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    #my-image.fade-in {
+      opacity: 1;
+    }
+    #my-image.fade-out {
+      opacity: 0;
+    }
+  </style>
 </head>
 <body>
-  <img id="my-image" src="https://github.com/Uknong/kane_banner_ad/blob/main/gayc.gif?raw=true" style="display:none;">
+  <img id="my-image" src="https://github.com/Uknong/kane_banner_ad/blob/main/gayc.gif?raw=true">
   <script>
     const image = document.getElementById("my-image");
     setInterval(() => {
-      image.style.display = "block";
+      image.classList.remove("fade-out");
+      image.classList.add("fade-in");
       setTimeout(() => {
-        image.style.display = "none";
+        image.classList.remove("fade-in");
+        image.classList.add("fade-out");
       }, 5000);
     }, 10000);
   </script>
