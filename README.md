@@ -1,5 +1,5 @@
 # kane_banner_ad
-https://tgd.kr/s/kanetv8/69664862#comment-69664942
+https://tgd.kr/s/kanetv8/69664862#comment-69664942  
 [OBS에 추가]  
 OBS 소스 목록 추가에 브라우저 선택 후 확인  
 로컬 파일 체크,  
