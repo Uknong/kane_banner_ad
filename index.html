@@ -6,7 +6,7 @@
   <title>Image Animation</title>
   <style>
     #my-image {
-      opacity: 0;
+      opacity: 1;
       transition: opacity 1s;
     }
     #my-image.fade-in {
@@ -18,17 +18,23 @@
   </style>
 </head>
 <body>
-  <img id="my-image" src="change.png"> <!-- 파일명 -->
+  <img id="my-image" src="change.png"> <!-- 파일명 변경 -->
   <script>
     const image = document.getElementById("my-image");
-    setInterval(() => {
+    const showTime = 8000; // 이미지가 보이는 시간 (8초)
+    const hideTime = 4000; // 이미지가 숨겨진 시간 (4초)
+
+    function fade() {
       image.classList.remove("fade-out");
       image.classList.add("fade-in");
       setTimeout(() => {
         image.classList.remove("fade-in");
         image.classList.add("fade-out");
-      }, 5000); //꺼짐시간
-    }, 10000); //켜짐시간 
+      }, showTime);
+    }
+
+    setInterval(fade, hideTime + showTime);
+    fade();
   </script>
 </body>
 </html>
